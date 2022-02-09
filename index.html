@@ -12,8 +12,10 @@
     <title>Interactive UI</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/js/roundslider.min.js"></script>
-    <link href="/css/roundslider.css" rel="stylesheet"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="/css/roundslider.css" rel="stylesheet" />
+    <script src="js/roundslider.min.js"></script>
 
 </head>
 
@@ -24,16 +26,24 @@
         <img src="/img/avita-bulb.png" class="bulb-img" />
         <!--- Button Group 1 -->
         <div class="fn-group" style="width: 100%">
-            <div id="arc-slider" class="rslider" id="toggle"></div>
+            <div id="slider-bright" class="brightness"></div>
+            <div id="slider-preset" class="presets"></div>
+            <div id="slider-color" class="colors"></div>
+            <div id="slider-timer" class="timers"></div>
+
         </div>
+        <!--- Button Group 1 -->
+
+    
 
         <div class="btn-group" style="width: 100%">
-            <img class="image-btn" id="toggle-button" src="/img/brightness.png" />
-            <img class="image-btn" id="btn2" src="/img/presets.png " />
-            <img class="image-btn" id="btn3" src="/img/color.png " />
-            <img class="image-btn" id="btn4" src="/img/timer.png " />
+
+            <img class="image-btn toggle-bright" id="bright" src="/img/brightness.png" />
+            <img class="image-btn toggle-preset" id="preset" src="/img/presets.png " />
+            <img class="image-btn toggle-color" id="color"   src="/img/color.png " />
+            <img class="image-btn toggle-timer" id="timer"  src="/img/timer.png " />
         </div>
-    
+
 
         <div class="txt-group" style="width: 100%">
             <span class="image-txt">Brightness</span>
@@ -43,6 +53,7 @@
         </div>
     </div>
     <script src="/js/script.js"></script>
+  
 
 </body>
 
