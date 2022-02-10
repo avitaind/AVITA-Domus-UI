@@ -38,6 +38,9 @@ body {
   width: 15%;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1000;
+  opacity: 1!important;
+
 }
 
 
@@ -47,7 +50,15 @@ body {
   width: 10%;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1000;
+  opacity: 1!important;
 }
+
+
+input[type=range]{
+  -webkit-appearance: none;
+}
+
 
 /*Button Group CSS */
 

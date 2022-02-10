@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
     <title>Interactive UI</title>
-
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -20,16 +20,16 @@
 </head>
 
 <body>
-    <div class="container-fluid py-4">
+    <div class="container-fluid py-4" id="main">
         <img src="/img/domus-logo.png" class="logo-img" />
         <!-- <h1 class="heading py-4">AVITA Domus</h1> -->
         <img src="/img/avita-bulb.png" class="bulb-img" />
         <!--- Button Group 1 -->
         <div class="fn-group" style="width: 100%">
-            <div id="slider-bright" class="brightness"></div>
-            <div id="slider-preset" class="presets"></div>
-            <div id="slider-color" class="colors"></div>
-            <div id="slider-timer" class="timers"></div>
+            <div id="slider-bright" type="range" class="brightness"></div>
+            <div id="slider-preset" type="range" class="presets"></div>
+            <div id="slider-color" type="range" class="colors"></div>
+            <div id="slider-timer" type="range" class="timers"></div>
 
         </div>
         <!--- Button Group 1 -->
@@ -53,7 +53,7 @@
         </div>
     </div>
     <script src="/js/script.js"></script>
-  
+
 
 </body>
 
