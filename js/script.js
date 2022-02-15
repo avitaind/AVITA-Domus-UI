@@ -73,11 +73,13 @@ $("#slider-color").roundSlider({
     showTooltip: false,
     value: 50,
     change: function (args) {
-        red = Math.floor(Math.random(args.value)*100);
-        green = Math.floor(Math.random(args.value)*100);
-        blue = Math.floor(Math.random(args.value)*100);
+        red =  Math.floor((Math.random(args.value) * 255) + 1);
+        green =  Math.floor((Math.random(args.value) * 255) + 1);
+        blue =  Math.floor((Math.random(args.value) * 255) + 1);
+        // color = `rgb(${red},${green},${blue})`;
+
         color = `rgb(${red},${green},${blue})`;
-        // color = "#" + ((1 << 255) + (red << 16) + (green << 8) + blue).toString(16).slice(1);
+
         console.log(color);
         document.getElementById("main").style.background = color;
     }    
@@ -101,23 +103,25 @@ $(document).ready(function () {
 
 
 
+
 /*Timers*/
+
 $("#slider-timer").roundSlider({
     radius: 80,
     circleShape: "half-top",
     sliderType: "min-range",
     showTooltip: false,
-    value: 50,
-    change: function (args) {
-        red = args.value;
-        green = args.value;
-        blue = args.value;
-        color = "#" + ((1 << 255) + (red << 16) + (green << 8) + blue).toString(16).slice(1);
-        console.log(color);
-        document.getElementById("main").style.background = color;
-    } 
-
+    min: 0,
+    max: 255,
+    range: true,
+    change: _.debounce(function(event, ui) {
+       color = "#" + ((1 << 255) + (event.value << 16) + (event.value << 8) + event.value).toString(16).slice(1);
+       console.log('just after three seconds');
+       document.getElementById("main").style.background = color;
+    },3000)
 });
+
+
 
 
 $(document).ready(function () {
